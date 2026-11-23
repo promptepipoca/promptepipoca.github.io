@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Faça o ChatGPT indicar o seu negócio · Prompt &amp; Pipoca</title>
+<meta name="description" content="O checklist completo pro ChatGPT achar o seu negócio e passar a indicar você, com a skill grátis e o passo a passo do Business Hub.">
+<meta property="og:title" content="Faça o ChatGPT indicar o seu negócio · Prompt & Pipoca">
+<meta property="og:description" content="Checklist + skill grátis + Business Hub do ChatGPT, passo a passo.">
+<meta property="og:image" content="hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/pp.css">
+</head>
+<body>
+<div class="top"><span><i class="dot"></i><span class="lbl">Material gratuito · </span><b>Prompt &amp; Pipoca</b></span><a href="https://www.instagram.com/promptepipoca/">@promptepipoca 🍿</a></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kick">Palavra CHATGPT</div>
+  <h1>Faça o <em>ChatGPT</em> indicar o seu negócio</h1>
+  <p class="lead">O checklist completo pro ChatGPT achar a sua empresa e passar a indicar você quando alguém pergunta. Com a skill grátis que confere tudo e o passo a passo do novo Business Hub.</p>
+  <div class="btns">
+    <a class="btn pri" href="#achar">Ver o passo a passo</a>
+    <a class="btn" href="#prompt">Pegar o prompt</a>
+    <a class="btn" href="material.pdf" download="CHATGPT_Prompt_e_Pipoca.pdf">Baixar o PDF</a>
+  </div>
+  <p class="meta">● 2 partes · 1 prompt com botão Copiar · skill grátis (62 mil estrelas no GitHub)</p>
+  <div class="heroimg"><img src="hero.jpg" alt="Cena do reel: o dev com o celular na mão e o mascote Claude de braços cruzados" width="720" height="1264" loading="eager"></div>
+</div></header>
+
+<main class="wrap">
+
+<section>
+  <div class="kick">O problema</div>
+  <h2>Ele indica o seu <em>concorrente</em></h2>
+  <p>Quando alguém pergunta "qual a melhor loja de… perto de mim?", o ChatGPT pesquisa e devolve uma lista. Se o seu negócio não aparece, o cliente nem sabe que você existe.</p>
+  <div class="chat" style="margin-top:18px">
+    <div class="hd"><i></i>ChatGPT<span>busca na web</span></div>
+    <div class="bd">
+      <div class="ub">Qual a melhor loja de tênis perto de mim?</div>
+      <div style="margin-top:12px">
+        <div class="it"><span class="n">1</span>Loja Passo Certo<span class="r">★ 4,8</span></div>
+        <div class="it"><span class="n">2</span>Tênis &amp; Cia<span class="r">★ 4,7</span></div>
+        <div class="it"><span class="n">3</span>Mundo do Tênis<span class="r">★ 4,6</span></div>
+        <div class="it me"><span class="n">?</span>Sua loja<span class="r">não citada</span></div>
+      </div>
+    </div>
+  </div>
+  <p class="mut" style="font-size:13px;margin-top:8px">Exemplo ilustrativo, com nomes inventados.</p>
+</section>
+
+<section>
+  <div class="kick">Antes de começar</div>
+  <h2>Ser achado ≠ ser <em>indicado</em></h2>
+  <p>O ChatGPT faz duas coisas diferentes. Você precisa passar nas duas.</p>
+  <div class="grid2">
+    <div class="card y"><span class="tag">Parte 1 · te achar</span><p>Ele pesquisa na internet e lê páginas. Se o seu site não está no índice que ele usa, ou não diz as coisas de forma clara, ele usa o site do concorrente como fonte. <b>Depende do seu site.</b></p></div>
+    <div class="card r"><span class="tag r">Parte 2 · te indicar</span><p>Para recomendar um nome, ele olha o que o <b>resto da internet</b> fala de você: avaliações, fóruns, matérias, vídeos. Quem só se elogia no próprio site raramente entra na lista.</p></div>
+  </div>
+</section>
+
+<section id="achar">
+  <div class="kick">Parte 1 · passo 1</div>
+  <h2>Coloque o site no <em>Bing</em></h2>
+  <p>A busca do ChatGPT se apoia num índice do Bing. Muita gente só cadastrou o site no Google, e aí o ChatGPT simplesmente não encontra.</p>
+  <ol class="steps">
+    <li>Entre em <b>bing.com/webmasters</b> (Bing Webmaster Tools) com uma conta Microsoft ou Google.</li>
+    <li>Se o seu site já está no <b>Google Search Console</b>, escolha <b>importar do Google Search Console</b>. Ele traz o site e o sitemap de uma vez.</li>
+    <li>Se não está, adicione o endereço do site e confirme que ele é seu (o próprio Bing mostra as opções).</li>
+    <li>Envie o <b>sitemap</b> (normalmente seusite.com/sitemap.xml).</li>
+    <li>Volte em alguns dias e veja se as páginas aparecem como indexadas.</li>
+  </ol>
+  <p class="mut">Extra: o Claude pesquisa pelo índice do Brave. Dá pra pedir a leitura do seu site em <b>search.brave.com/submit-url</b>.</p>
+</section>
+
+<section>
+  <div class="kick">Parte 1 · passos 2 e 3</div>
+  <h2>Deixe ele <em>entrar</em> e entender</h2>
+  <h3>Não bloqueie o robô de busca</h3>
+  <p>O robô que o ChatGPT usa para buscar se chama <b>OAI-SearchBot</b>. Se o seu <b>robots.txt</b>, o Cloudflare ou a hospedagem bloqueia "robôs de IA", ele não lê o seu site. Confira se existe algo assim:</p>
+  <div class="code">User-agent: OAI-SearchBot
+Disallow: /</div>
+  <p style="margin-top:12px">Se existir, troque <b>Disallow: /</b> por <b>Allow: /</b>. Bloquear o robô de <b>treino</b> (GPTBot) é outra coisa e não impede a busca.</p>
+  <h3>Escreva para ser citado</h3>
+  <ul class="chk">
+    <li><b>Resposta direta no começo</b> de cada página: o que você vende, para quem e onde.</li>
+    <li><b>Números de verdade</b>: preço, prazo, quantos clientes, há quanto tempo. Nada de "o melhor da cidade".</li>
+    <li><b>Preço visível</b> na página, não escondido em "fale conosco".</li>
+    <li><b>Perguntas frequentes</b> escritas como o cliente pergunta.</li>
+    <li><b>Data de atualização</b> visível nas páginas importantes.</li>
+  </ul>
+</section>
+
+<section id="hub">
+  <div class="kick">Novo · beta desde 10/11</div>
+  <h2>Reivindique a empresa <em>no ChatGPT</em></h2>
+  <p>A OpenAI lançou o <b>Business Hub</b>: o dono confirma que a empresa é dele e passa a cuidar das informações dela dentro do próprio ChatGPT.</p>
+  <ol class="steps">
+    <li>No ChatGPT, abra <b>Business Hub</b> na barra lateral (ou <b>chatgpt.com/business-hub</b>) e procure a sua empresa pelo nome.</li>
+    <li>Escolha o perfil certo e confirme a conta do ChatGPT que vai cuidar dele.</li>
+    <li>Prove que é seu com um dos métodos que aparecerem: <b>telefone</b>, <b>e-mail da empresa</b>, <b>domínio do site</b> (um registro TXT no DNS) ou <b>Shopify</b>.</li>
+    <li>Depois da aprovação, faça a <b>verificação de identidade</b> (Persona): documento com foto e os dados do registro da empresa, iguais aos oficiais.</li>
+    <li>Aprovado: atualize site, descrição, categoria, logo e políticas de entrega e troca. Quem vende produto pode ligar um catálogo.</li>
+  </ol>
+  <div class="card y" style="margin-top:6px"><p><b>O que você ganha:</b> um painel com <b>menções</b>, <b>cliques no seu site</b> e os temas das conversas em que você apareceu (últimos 28 dias).</p></div>
+  <div class="card r" style="margin-top:12px"><span class="tag r">Leia antes</span><p class="warn">Está em beta e depende do país e do tipo de negócio. Hoje, <b>loja online e serviço online</b> podem reivindicar; <b>loja física e restaurante</b>, por enquanto, só perfis que já existem nos EUA. E a própria OpenAI avisa: reivindicar <b>não garante</b> que ele vai te indicar mais. Por isso o resto desta página continua valendo.</p></div>
+</section>
+
+<section id="skill">
+  <div class="kick">A skill grátis</div>
+  <h2>Instale a <em>ai-seo</em></h2>
+  <p>Ela faz o Claude conferir o seu site e a sua presença do jeito que as IAs leem. Escolha um caminho.</p>
+  <h3>💬 No Claude (site ou app)</h3>
+  <ol class="steps">
+    <li>Abra <a href="https://github.com/coreyhaines31/marketingskills/releases">github.com/coreyhaines31/marketingskills/releases</a> e baixe o arquivo <b>ai-seo-claude-web.zip</b>.</li>
+    <li>No Claude, vá em <b>Personalizar → Skills → + Criar skill → Fazer upload de uma skill</b> e escolha o zip.</li>
+    <li>Precisa da execução de código ligada nas configurações.</li>
+  </ol>
+  <h3>⌨️ No Claude Code</h3>
+  <div class="code big" id="cmd"><button class="copy" data-copy="cmd">Copiar</button>npx skills add coreyhaines31/marketingskills --skill ai-seo -a claude-code</div>
+  <p class="mut" style="margin-top:10px;font-size:14px">Comandos copiados do README do repositório. Os nomes dos menus do Claude podem mudar um pouco.</p>
+</section>
+
+<section id="prompt">
+  <div class="kick">Copie e cole</div>
+  <h2>O prompt da <em>auditoria</em></h2>
+  <p>Prompt do Prompt &amp; Pipoca para usar com a skill. Troque o que está entre colchetes.</p>
+  <div class="code big" id="pr"><button class="copy" data-copy="pr">Copiar prompt</button>Use a skill ai-seo. Meu negócio: [o que eu vendo], em [cidade], site [link].
+
+1) Liste as 15 perguntas que um cliente faria ao ChatGPT antes de comprar o que eu vendo.
+2) Leia o meu site e diga, página por página, o que falta para ele ser citado: resposta direta, números, preço visível, perguntas frequentes, data.
+3) Confira se o meu robots.txt bloqueia o OAI-SearchBot.
+4) Diga onde, fora do meu site, eu preciso aparecer (avaliações, fóruns, diretórios, matérias) e por onde começar.
+
+Entregue uma lista de tarefas, da mais rápida para a mais demorada.</div>
+  <p class="mut" style="margin-top:10px;font-size:14px">Se o Claude não conseguir abrir o site, cole o texto das páginas principais na conversa.</p>
+</section>
+
+<section>
+  <div class="kick">Parte 2 · te indicar</div>
+  <h2>Faça a internet <em>falar</em> de você</h2>
+  <ul class="chk">
+    <li><b>Avaliações:</b> peça avaliação a todo cliente satisfeito, no Google e nas plataformas do seu setor. E <b>responda</b> às avaliações, inclusive as ruins.</li>
+    <li><b>Perfil de empresa no Google completo:</b> horário, serviços, fotos, perguntas respondidas.</li>
+    <li><b>Fóruns e comunidades:</b> participe com o seu nome onde o seu cliente pergunta (grupos, Reddit, fóruns do setor). Ajude, não faça propaganda.</li>
+    <li><b>Matérias e vídeos:</b> blogs do bairro, jornais locais, podcasts, YouTube. Tudo que vira texto na internet pode ser lido.</li>
+    <li><b>A mesma descrição em todo lugar:</b> diga o que você faz e para quem do mesmo jeito no site, no Google, no Instagram e nos diretórios. A IA procura consenso.</li>
+  </ul>
+  <div class="card r" style="margin-top:14px"><span class="tag r">Não faça</span><p class="warn">Avaliação falsa, site de "ranking" que é seu, spam em fórum. Além de não funcionar por muito tempo, pode dar problema com as plataformas e com a lei.</p></div>
+</section>
+
+<section>
+  <div class="kick">Como saber se funcionou</div>
+  <h2>Meça do jeito <em>certo</em></h2>
+  <ol class="steps">
+    <li>Escolha as <b>10 perguntas</b> que mais importam para o seu negócio (a auditoria já te dá a lista).</li>
+    <li>Faça cada pergunta ao ChatGPT <b>3 a 5 vezes</b>. A resposta muda de uma vez para outra, então uma vez só não prova nada.</li>
+    <li>Anote numa planilha: apareci? fui só citado ou fui <b>indicado</b>? quem apareceu no meu lugar?</li>
+    <li>Repita <b>uma vez por mês</b> e compare.</li>
+  </ol>
+  <p><b>Seja realista:</b> não aparece amanhã. O Bing precisa indexar o site e as avaliações levam tempo para se acumular. Pense em meses, não em dias.</p>
+</section>
+
+<section>
+  <div class="kick">Dúvidas</div>
+  <h2>Perguntas que todo mundo faz</h2>
+  <details><summary>Preciso pagar alguma coisa?</summary><p>Não. A skill é grátis, o Bing Webmaster Tools é grátis e o Business Hub não exige anúncio.</p></details>
+  <details><summary>Funciona para loja física?</summary><p>As partes 1 e 2 funcionam para qualquer negócio. O Business Hub, por enquanto, só aceita loja física e restaurante com perfil já existente nos EUA. Loja online e serviço online podem reivindicar.</p></details>
+  <details><summary>Não tenho site. E agora?</summary><p>Comece pela parte 2: avaliações, perfil de empresa no Google completo e a mesma descrição em todo lugar. É o que mais pesa para ser indicado.</p></details>
+  <details><summary>Em quanto tempo eu apareço?</summary><p>Ninguém consegue garantir. O cadastro no Bing leva alguns dias para aparecer, e avaliações e menções levam meses para se acumular. Meça todo mês.</p></details>
+  <details><summary>Funciona no Claude, no Gemini e nos outros?</summary><p>Sim. O que faz uma IA citar e indicar você é parecido em todas: site claro, presença fora do site e consenso. O Bing pesa mais para o ChatGPT e o Copilot; o Google, para o Gemini; o Brave, para o Claude.</p></details>
+</section>
+
+<section class="cta">
+  <h2>Gostou? Tem mais <em>no perfil</em> 🍿</h2>
+  <p>Todo reel do Prompt &amp; Pipoca entrega um material desses de graça. É só comentar a palavra.</p>
+  <div class="btns" style="margin-top:18px"><a class="btn pri" href="https://www.instagram.com/promptepipoca/">Seguir o @promptepipoca</a><a class="btn" href="material.pdf" download="CHATGPT_Prompt_e_Pipoca.pdf">Baixar o PDF</a></div>
+</section>
+
+</main>
+<footer><div class="wrap">Feito pelo Prompt &amp; Pipoca 🍿 · Este material não é oficial. ChatGPT e Business Hub são marcas da OpenAI; Bing, da Microsoft. A skill ai-seo é de coreyhaines31/marketingskills (licença MIT).</div></footer>
+<div class="toast" id="toast">Copiado ✓</div>
+<script>
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{
+  const el=document.getElementById(b.dataset.copy).cloneNode(true);el.querySelector('.copy').remove();
+  const txt=el.textContent.trim();
+  try{await navigator.clipboard.writeText(txt)}catch(e){const t=document.createElement('textarea');t.value=txt;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+  const tt=document.getElementById('toast');tt.classList.add('on');setTimeout(()=>tt.classList.remove('on'),1600);
+}));
+</script>
+</body>
+</html>

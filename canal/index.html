@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CANAL · Prompt &amp; Pipoca</title>
+<meta name="description" content="YouTube Agent Skill: 11 skills grátis do Claude para o seu canal do YouTube.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/pp.css">
+</head>
+<body>
+<div class="top"><span><i class="dot"></i><span class="lbl">Material gratuito · </span><b>Prompt &amp; Pipoca</b></span><a href="https://www.instagram.com/promptepipoca/">@promptepipoca 🍿</a></div>
+<header class="hero"><div class="wrap">
+  <div class="kick">Palavra CANAL</div>
+  <h1>YouTube Agent Skill: 11 skills grátis do Claude para o seu <em>canal do YouTube</em></h1>
+  <div class="btns"><a class="btn pri" href="CANAL.pdf" download="CANAL_Prompt_e_Pipoca.pdf">Baixar o PDF</a><a class="btn" href="#instalar">Como instalar</a></div>
+</div></header>
+<main class="wrap">
+<section>
+  <div class="kick">O que é</div>
+  <p>Pacote gratuito e de código aberto para o Claude Code, criado por Jake Schincariol (repositório Jakeschincariol/youtube-agent-skill, licença MIT, mais de 6 mil estrelas no GitHub em 19/11/2026).</p>
+  <p>Segundo o README (resumo e tradução nossos): são onze skills do Claude para tocar um canal do YouTube. Não pede cadastro, não pede chave de API e não se liga ao seu canal. Elas escrevem; quem grava e publica é você.</p>
+</section>
+<section>
+  <div class="kick">As 11 skills (comandos copiados do README, com explicação traduzida por nós)</div>
+  <div class="code">/yt-script</div><p class="mut" style="margin-top:6px">uma ideia vira roteiro: 5 ganchos a partir de 21 fórmulas, com nota, e o roteiro falado</p>
+  <div class="code">/yt-package</div><p class="mut" style="margin-top:6px">título e thumbnail como uma dupla, conferidos para não cortar, não repetir e não ficar vagos</p>
+  <div class="code">/yt-edit</div><p class="mut" style="margin-top:6px">a transcrição vira lista de cortes: silêncios, vícios de fala e regravações, com o tempo de cada um</p>
+  <div class="code">/yt-comment</div><p class="mut" style="margin-top:6px">separa os comentários em quatro grupos, escreve respostas no seu jeito e diz qual fixar</p>
+  <div class="code">/yt-plan</div><p class="mut" style="margin-top:6px">uma semana do tamanho das horas que você tem: um vídeo principal, um mais simples e três Shorts</p>
+  <div class="code">/yt-viral</div><p class="mut" style="margin-top:6px">o que está funcionando no seu nicho, ordenado por quanto cada vídeo superou a mediana do próprio canal</p>
+  <div class="code">/yt-retention</div><p class="mut" style="margin-top:6px">lê o seu relatório de retenção: onde o gancho vaza, as quedas e o que mudar</p>
+  <div class="code">/yt-shorts</div><p class="mut" style="margin-top:6px">os Shorts que já existem dentro de um vídeo longo, com uma primeira frase nova para cada um</p>
+  <div class="code">/yt-seo</div><p class="mut" style="margin-top:6px">a descrição, as tags que valem a pena e as três buscas que o vídeo deve ganhar</p>
+  <div class="code">/yt-chapters</div><p class="mut" style="margin-top:6px">capítulos a partir da transcrição, conferidos com as regras do YouTube</p>
+  <div class="code">/yt-audit</div><p class="mut" style="margin-top:6px">o canal inteiro, terminando em UMA correção, não em vinte</p>
+</section>
+<section id="instalar">
+  <div class="kick">Como instalar (copiado do README)</div>
+  <h3>Jeito 1. Cole isto no Claude:</h3>
+  <div class="code big" id="j1"><button class="copy" data-copy="j1">Copiar</button>https://github.com/Jakeschincariol/youtube-agent-skill
+
+Install this skill, then confirm /yt-script works.</div>
+  <h3>Jeito 2. Como plugin, no Claude Code:</h3>
+  <div class="code big" id="j2"><button class="copy" data-copy="j2">Copiar</button>/plugin marketplace add Jakeschincariol/youtube-agent-skill
+/plugin install youtube-agent</div>
+  <h3>Jeito 3. Na mão, no Claude Code:</h3>
+  <div class="code big" id="j3"><button class="copy" data-copy="j3">Copiar</button>git clone https://github.com/Jakeschincariol/youtube-agent-skill.git
+cp -r youtube-agent-skill/skills/yt-* ~/.claude/skills/</div>
+</section>
+<section>
+  <div class="kick">Primeiro passo depois de instalar: o seu jeito de falar</div>
+  <p>O README pede dez minutos no arquivo templates/voice.md. Copie para ~/.claude/youtube/voice.md e preencha, ou mande para o Claude três vídeos seus e diga (frase do README, em inglês):</p>
+  <div class="code">write my voice.md from these</div>
+  <p style="margin-top:12px">Todas as skills leem esse arquivo. É ele que faz o roteiro sair com a sua cara.</p>
+</section>
+<section>
+  <div class="kick">Como começar (sugestão nossa, não está no README)</div>
+  <ol class="steps">
+    <li>/yt-viral com 3 canais do seu nicho, para achar a ideia que já funcionou.</li>
+    <li>/yt-script com essa ideia, para sair com o gancho e o roteiro.</li>
+    <li>/yt-package para o título e o texto da thumbnail do mesmo vídeo.</li>
+  </ol>
+  <p>As skills são escritas em inglês. Peça "responde em português do Brasil" se o Claude responder em inglês.</p>
+</section>
+<section>
+  <div class="card r"><span class="tag r">Atenção (o que o próprio README avisa)</span>
+  <ul class="chk" style="margin-top:4px">
+    <li>Ela não publica. Cada skill termina num bloco para você copiar. Gravar e subir o vídeo é com você.</li>
+    <li>A nota do gancho é uma heurística, não uma previsão. Foi calibrada com 74 ganchos reais. Nota baixa é motivo para olhar de novo; nota alta não é promessa.</li>
+    <li>O /yt-viral só lê listagens públicas. Não entra na sua conta e não mexe nas suas credenciais.</li>
+    <li>Tags quase não importam, e o pacote diz isso em vez de vender um gerador de tags.</li>
+    <li>Nenhuma skill inventa número. Se faltar um dado, ela pede ou escreve a frase sem ele.</li>
+    <li>Seis das skills usam pequenos programas em Python 3, sem dependências. Sem o Claude Code dá para colar um SKILL.md no começo de uma conversa, mas você perde esses programas.</li>
+  </ul></div>
+  <div class="card y" style="margin-top:12px"><span class="tag">Atenção (nossa)</span>
+  <ul class="chk" style="margin-top:4px">
+    <li>No reel, os 50 mil de visualizações são a história da cena, não um resultado medido. A skill ajuda a escolher a ideia e a escrever; ela não garante visualizações.</li>
+    <li>O único custo é o uso do seu plano do Claude.</li>
+  </ul></div>
+</section>
+<section>
+  <div class="kick">Referência</div>
+  <p><a href="https://github.com/Jakeschincariol/youtube-agent-skill">https://github.com/Jakeschincariol/youtube-agent-skill</a><br>README lido em 19/11/2026.</p>
+</section>
+<section class="cta">
+  <h2>Gostou? Tem mais <em>no perfil</em> 🍿</h2>
+  <div class="btns" style="margin-top:18px"><a class="btn pri" href="https://www.instagram.com/promptepipoca/">Seguir o @promptepipoca</a><a class="btn" href="CANAL.pdf" download="CANAL_Prompt_e_Pipoca.pdf">Baixar o PDF</a></div>
+</section>
+</main>
+<footer><div class="wrap">Prompt &amp; Pipoca 🍿 · Material não oficial. As skills são de Jakeschincariol/youtube-agent-skill (licença MIT).</div></footer>
+<div class="toast" id="toast">Copiado ✓</div>
+<script>
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{
+  const el=document.getElementById(b.dataset.copy).cloneNode(true);el.querySelector('.copy').remove();
+  const txt=el.textContent.trim();
+  try{await navigator.clipboard.writeText(txt)}catch(e){const t=document.createElement('textarea');t.value=txt;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+  const tt=document.getElementById('toast');tt.classList.add('on');setTimeout(()=>tt.classList.remove('on'),1600);
+}));
+</script>
+</body>
+</html>

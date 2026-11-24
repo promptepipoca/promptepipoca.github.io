@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Simule o seu imposto novo com a calculadora oficial · Prompt &amp; Pipoca</title>
+<meta name="description" content="O link oficial da calculadora da reforma tributária (Receita Federal, no GitHub) e o passo a passo pro Claude rodar ela e simular a CBS e o IBS da sua venda.">
+<meta property="og:title" content="Simule o seu imposto novo com a calculadora oficial · Prompt & Pipoca">
+<meta property="og:description" content="Link oficial + pedido pronto pro Claude simular CBS e IBS, com versão do Simples Nacional.">
+<meta property="og:image" content="hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/pp.css">
+</head>
+<body>
+<div class="top"><span><i class="dot"></i><span class="lbl">Material gratuito · </span><b>Prompt &amp; Pipoca</b></span><a href="https://www.instagram.com/promptepipoca/">@promptepipoca 🍿</a></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kick">Palavra TRIBUTO</div>
+  <h1>Simule o seu <em>imposto novo</em> com a calculadora oficial</h1>
+  <p class="lead">A Receita publicou no GitHub o código da calculadora da reforma tributária. Ela calcula a CBS e o IBS de uma venda, e tem uma versão só para o Simples Nacional. Aqui está o link oficial e o pedido pronto pro Claude instalar, rodar e te explicar o resultado.</p>
+  <div class="btns">
+    <a class="btn pri" href="#prompt">Pegar o pedido</a>
+    <a class="btn" href="#links">Links oficiais</a>
+    <a class="btn" href="TRIBUTO.pdf" download="TRIBUTO_Prompt_e_Pipoca.pdf">Baixar o PDF</a>
+  </div>
+  <p class="meta">● link oficial · 1 pedido com botão Copiar · 3 perguntas pro contador</p>
+  <div class="heroimg"><img src="hero.jpg" alt="Cena do reel: o dev com a mão na cabeça e o mascote Claude ao lado, com a nota fiscal de exemplo" width="720" height="1264" loading="eager"></div>
+</div></header>
+
+<main class="wrap">
+
+<section id="links">
+  <div class="kick">O que é</div>
+  <h2>A calculadora <em>oficial</em> é aberta</h2>
+  <p>São programas da Receita Federal que calculam a <b>CBS</b> e o <b>IBS</b> (e, no regime geral, o Imposto Seletivo) pela lei da reforma, a LC 214/2025, usando as tabelas oficiais. Não é um site: é um programa que roda no computador. Por isso o Claude ajuda.</p>
+  <div class="grid2">
+    <div class="card y"><span class="tag">Simples Nacional</span><p><a href="https://github.com/ReceitaFederal/calculadora-rtc-simples-nacional">github.com/ReceitaFederal/calculadora-rtc-simples-nacional</a></p></div>
+    <div class="card"><span class="tag">Regime geral</span><p><a href="https://github.com/ReceitaFederal/calculadora-rtc-regime-regular">github.com/ReceitaFederal/calculadora-rtc-regime-regular</a></p></div>
+  </div>
+  <p class="mut" style="margin-top:12px">Você precisa de: <b>Claude Code</b> (ou outro assistente que rode comandos no computador), <b>Git</b> e internet. Leva uns 10 minutos na primeira vez.</p>
+</section>
+
+<section id="prompt">
+  <div class="kick">Copie e cole no Claude Code</div>
+  <h2>O pedido <em>pronto</em></h2>
+  <p>Pedido do Prompt &amp; Pipoca, testado em 24/11/2026 num Windows.</p>
+  <div class="code big" id="pr"><button class="copy" data-copy="pr">Copiar pedido</button>Quero simular a CBS e o IBS de uma venda minha com a calculadora oficial da Receita (Simples Nacional). Faça nesta ordem e me avise a cada etapa:
+1. Baixe um Java 25 portátil numa pasta de trabalho, sem instalar nada no sistema.
+2. Clone github.com/ReceitaFederal/calculadora-rtc-simples-nacional e github.com/ReceitaFederal/calculadora-rtc-regime-regular.
+3. Copie a pasta flyway do regime-regular para o simples-nacional, crie calculadora/db e gere o banco com o mvnw flyway:migrate, como manda o README (no Windows, chame .\mvnw.cmd).
+4. Suba a calculadora com o perfil offline (porta 8082).
+5. Me pergunte: o valor da venda, o que eu vendo (para achar o código da atividade e o NCM ou NBS), a data e as minhas alíquotas efetivas de IBS e CBS. Se eu não souber as alíquotas, use as do exemplo da documentação e diga que é exemplo.
+6. Rode o cálculo em /api/calculadora/observabilidade/simples-nacional e me explique em português simples a memória de cálculo: base, alíquota e valor de cada tributo.
+7. No fim, desligue a calculadora e me diga o que perguntar ao meu contador.</div>
+  <div class="card y" style="margin-top:14px"><p><b>No nosso teste:</b> venda de exemplo de R$ 1.000 → CBS R$ 27,50 e IBS R$ 12,50, com as alíquotas de exemplo da documentação (2,75% e 1,25%). A calculadora devolve a memória de cálculo em texto, explicando cada número.</p></div>
+</section>
+
+<section>
+  <div class="kick">Leve para o seu contador</div>
+  <h2>As 3 <em>perguntas</em></h2>
+  <ul class="chk">
+    <li>Qual é a minha <b>alíquota efetiva</b> de IBS e de CBS no Simples? (A calculadora não descobre sozinha: você informa.)</li>
+    <li>Qual é o <b>código da minha atividade</b> e o <b>NCM ou NBS</b> do que eu vendo?</li>
+    <li>O meu <b>sistema de nota</b> já calcula CBS e IBS do jeito da calculadora oficial?</li>
+  </ul>
+  <div class="card r" style="margin-top:14px"><span class="tag r">Leia antes</span><p class="warn">É simulação para entender a conta. O valor oficial e o enquadramento continuam com o seu contador.</p></div>
+</section>
+
+<section>
+  <div class="kick">Dúvidas</div>
+  <h2>Perguntas que todo mundo faz</h2>
+  <details><summary>Preciso pagar alguma coisa?</summary><p>Não. O código é público e grátis. Você só precisa de um assistente que rode comandos, como o Claude Code.</p></details>
+  <details><summary>Funciona para MEI?</summary><p>A versão do Simples Nacional cobre as atividades do Simples. Confirme com o seu contador como o seu caso entra na reforma.</p></details>
+  <details><summary>E se der erro na instalação?</summary><p>Cole o erro para o Claude e peça para ele seguir o README do repositório. O passo que mais trava no Windows é chamar o .\mvnw.cmd com o ".\" na frente.</p></details>
+</section>
+
+<section class="cta">
+  <h2>Gostou? Tem mais <em>no perfil</em> 🍿</h2>
+  <p>Todo reel do Prompt &amp; Pipoca entrega um material desses de graça. É só comentar a palavra.</p>
+  <div class="btns" style="margin-top:18px"><a class="btn pri" href="https://www.instagram.com/promptepipoca/">Seguir o @promptepipoca</a><a class="btn" href="TRIBUTO.pdf" download="TRIBUTO_Prompt_e_Pipoca.pdf">Baixar o PDF</a></div>
+</section>
+
+</main>
+<footer><div class="wrap">Feito pelo Prompt &amp; Pipoca 🍿 · Este material não é oficial e não é consultoria tributária. O código das calculadoras é da Receita Federal (github.com/ReceitaFederal).</div></footer>
+<div class="toast" id="toast">Copiado ✓</div>
+<script>
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{
+  const el=document.getElementById(b.dataset.copy).cloneNode(true);el.querySelector('.copy').remove();
+  const txt=el.textContent.trim();
+  try{await navigator.clipboard.writeText(txt)}catch(e){const t=document.createElement('textarea');t.value=txt;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+  const tt=document.getElementById('toast');tt.classList.add('on');setTimeout(()=>tt.classList.remove('on'),1600);
+}));
+</script>
+</body>
+</html>

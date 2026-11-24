@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GOOGLE · Prompt &amp; Pipoca</title>
+<meta name="description" content="Claude SEO: a skill grátis que audita o seu site para o Google e para as respostas de IA.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/pp.css">
+<style>.code{white-space:pre-wrap}</style>
+</head>
+<body>
+<div class="top"><span><i class="dot"></i><span class="lbl">Material gratuito · </span><b>Prompt &amp; Pipoca</b></span><a href="https://www.instagram.com/promptepipoca/">@promptepipoca 🍿</a></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kick">Palavra GOOGLE</div>
+  <h1>Claude SEO: a skill grátis que audita o seu site para o <em>Google</em> e para as respostas de IA</h1>
+  <div class="btns">
+    <a class="btn pri" href="GOOGLE.pdf" download="GOOGLE_Prompt_e_Pipoca.pdf">Baixar o PDF</a>
+    <a class="btn" href="#instalar">Como instalar</a>
+  </div>
+</div></header>
+
+<main class="wrap">
+<section>
+  <div class="kick">O que é</div>
+  <p>Plugin gratuito e de código aberto para o Claude Code, criado por Agrici Daniel (repositório AgriciDaniel/claude-seo, licença MIT, mais de 30 mil estrelas no GitHub em 18/11/2026).</p>
+  <p>Segundo o README (resumo e tradução nossos): você passa um site e ele faz uma auditoria completa de SEO em 10 a 15 minutos, e entrega um plano de ação ordenado pelo que mais importa. Usa até 17 agentes trabalhando no site ao mesmo tempo.</p>
+</section>
+
+<section>
+  <div class="kick">O que ele confere (resumo nosso do README)</div>
+  <ul class="chk">
+    <li>SEO técnico: rastreamento, indexação, sitemap, robots.txt, redirecionamentos, velocidade.</li>
+    <li>Conteúdo: qualidade, páginas fracas, cobertura dos assuntos.</li>
+    <li>Dados estruturados (Schema.org): encontra, valida e escreve.</li>
+    <li>Busca por IA: a chance de as respostas de IA do Google, o ChatGPT, o Perplexity e o Gemini citarem as suas páginas.</li>
+    <li>SEO local: Perfil da Empresa no Google, avaliações e o bloco do mapa.</li>
+  </ul>
+</section>
+
+<section id="instalar">
+  <div class="kick">Como instalar (comandos copiados do README)</div>
+  <p>Precisa do Claude Code 1.0.33 ou mais novo. Rode estes três comandos dentro dele:</p>
+  <div class="code big" id="c1"><button class="copy" data-copy="c1">Copiar</button>/plugin marketplace add AgriciDaniel/claude-seo
+/plugin install claude-seo@agricidaniel-claude-seo
+/seo setup</div>
+  <p style="margin-top:12px">O /seo setup prepara o que a skill precisa (um ambiente Python próprio e um navegador sem janela). O /seo doctor confere se está tudo pronto.</p>
+</section>
+
+<section>
+  <div class="kick">Como usar (comandos copiados do README, com explicação traduzida por nós)</div>
+  <div class="code">/seo audit https://seusite.com.br</div><p class="mut" style="margin-top:6px">auditoria completa, com plano priorizado</p>
+  <div class="code">/seo geo https://seusite.com.br</div><p class="mut" style="margin-top:6px">quão pronto o site está para a busca por IA</p>
+  <div class="code">/seo local https://seusite.com.br</div><p class="mut" style="margin-top:6px">SEO local e Perfil da Empresa no Google</p>
+  <div class="code">/seo page https://seusite.com.br/pagina</div><p class="mut" style="margin-top:6px">uma página só, em profundidade</p>
+  <div class="code">/seo schema https://seusite.com.br</div><p class="mut" style="margin-top:6px">confere e gera dados estruturados</p>
+  <p style="margin-top:12px">Digitar só /seo mostra todos os comandos.</p>
+</section>
+
+<section>
+  <div class="card r"><span class="tag r">Atenção</span>
+  <ul class="chk" style="margin-top:4px">
+    <li>A skill audita e entrega um plano. Ela não garante posição no Google, e avaliação de cliente não se resolve por comando.</li>
+    <li>Requisitos, segundo o README: Claude Code 1.0.33 ou mais novo e Python 3.11 a 3.14.</li>
+    <li>A auditoria completa gasta mais do seu plano do Claude do que a análise de uma página só, porque parte dos agentes roda no modelo mais caro.</li>
+    <li>Sem chaves das APIs do Google (gratuitas, opcionais), os números de velocidade são estimativas de laboratório.</li>
+    <li>As páginas analisadas são enviadas ao Claude, como qualquer coisa que você faz no Claude Code. Os relatórios ficam salvos no seu computador.</li>
+    <li>O autor também divulga uma comunidade paga, com uma versão privada da skill. A versão pública é gratuita.</li>
+  </ul></div>
+</section>
+
+<section>
+  <div class="kick">Referência</div>
+  <p><a href="https://github.com/AgriciDaniel/claude-seo">https://github.com/AgriciDaniel/claude-seo</a><br>README lido em 18/11/2026.</p>
+</section>
+
+<section class="cta">
+  <h2>Gostou? Tem mais <em>no perfil</em> 🍿</h2>
+  <div class="btns" style="margin-top:18px"><a class="btn pri" href="https://www.instagram.com/promptepipoca/">Seguir o @promptepipoca</a><a class="btn" href="GOOGLE.pdf" download="GOOGLE_Prompt_e_Pipoca.pdf">Baixar o PDF</a></div>
+</section>
+</main>
+<footer><div class="wrap">Prompt &amp; Pipoca 🍿 · Material não oficial. A skill é de AgriciDaniel/claude-seo (licença MIT).</div></footer>
+<div class="toast" id="toast">Copiado ✓</div>
+<script>
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{
+  const el=document.getElementById(b.dataset.copy).cloneNode(true);el.querySelector('.copy').remove();
+  const txt=el.textContent.trim();
+  try{await navigator.clipboard.writeText(txt)}catch(e){const t=document.createElement('textarea');t.value=txt;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+  const tt=document.getElementById('toast');tt.classList.add('on');setTimeout(()=>tt.classList.remove('on'),1600);
+}));
+</script>
+</body>
+</html>

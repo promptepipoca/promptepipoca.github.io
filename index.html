@@ -1,8 +1,44 @@
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Materiais · Prompt &amp; Pipoca</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/pp.css"></head>
-<body><div class="top"><span><i class="dot"></i>Materiais gratuitos · <b>Prompt &amp; Pipoca</b></span><a href="https://www.instagram.com/promptepipoca/">@promptepipoca 🍿</a></div>
-<main class="wrap"><section style="border:0"><div class="kick">Comenta a palavra, recebe o material</div><h1>Os materiais do <em>Prompt &amp; Pipoca</em></h1>
-<p class="lead">Cada reel entrega um destes de graça no direct.</p>
-<div class="grid2" style="margin-top:24px"><a class="card y" href="chatgpt/" style="text-decoration:none;color:inherit"><span class="tag">CHATGPT</span><p><b>Faça o ChatGPT indicar o seu negócio</b></p></a><a class="card y" href="tributo/" style="text-decoration:none;color:inherit"><span class="tag">TRIBUTO</span><p><b>Simule o seu imposto novo com a calculadora oficial</b></p></a></div>
-</section></main><footer><div class="wrap">Feito pelo Prompt &amp; Pipoca 🍿</div></footer></body></html>
+<meta name="description" content="Todos os guias grátis dos vídeos do Prompt &amp; Pipoca, num lugar só.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/pp.css">
+<style>
+.list{display:grid;gap:12px;margin-top:24px}
+.list .card{display:block;text-decoration:none;color:inherit}
+.list .card p{margin-top:2px}
+.list .card.off{opacity:.45;border-style:dashed;cursor:default;filter:grayscale(1)}
+.list .card.off .tag{background:var(--line);color:var(--mut)}
+.soon{float:right;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--mut)}
+</style>
+<script>
+/* ===========================================================
+   LISTA DOS GUIAS. Para liberar um guia quando o Short sair,
+   troque  publicado: false  por  publicado: true  e salve.
+   A ordem aqui é a ordem na página.
+   =========================================================== */
+const GUIAS = [
+  { palavra: "GOOGLE",  pasta: "google/",  publicado: true,  titulo: "Claude SEO: a skill grátis que audita o seu site para o Google e para as respostas de IA" },
+  { palavra: "CLIENTE", pasta: "cliente/", publicado: true,  titulo: "Marketing Skills: o Claude também ajuda a vender o que você programou" },
+  { palavra: "CANAL",   pasta: "canal/",   publicado: false, titulo: "YouTube Agent Skill: 11 skills grátis do Claude para o seu canal do YouTube" },
+  { palavra: "CHATGPT", pasta: "chatgpt/", publicado: false, titulo: "Faça o ChatGPT indicar o seu negócio" },
+  { palavra: "TRIBUTO", pasta: "tributo/", publicado: false, titulo: "Simule o seu imposto novo com a calculadora oficial" },
+];
+</script>
+</head>
+<body><div class="top"><span><i class="dot"></i>Materiais gratuitos · <b>Prompt &amp; Pipoca</b></span><a href="https://www.youtube.com/@promptepipoca">@promptepipoca 🍿</a></div>
+<main class="wrap"><section style="border:0"><div class="kick">Os guias dos vídeos</div><h1>Os materiais do <em>Prompt &amp; Pipoca</em></h1>
+<p class="lead">Todos os guias grátis num lugar só. Toca na palavra do vídeo que você viu.</p>
+<div class="list" id="lista"></div>
+</section>
+<section class="cta"><h2>Gostou? Tem mais <em>no canal</em> 🍿</h2><div class="btns" style="margin-top:18px"><a class="btn pri" href="https://www.youtube.com/@promptepipoca">Seguir o canal no YouTube</a></div></section>
+</main><footer><div class="wrap">Feito pelo Prompt &amp; Pipoca 🍿 · Materiais não oficiais; cada guia cita a fonte original.</div></footer>
+<script>
+{
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  document.getElementById('lista').innerHTML = GUIAS.map(g => g.publicado
+    ? `<a class="card y" href="${esc(g.pasta)}"><span class="tag">${esc(g.palavra)}</span><p><b>${esc(g.titulo)}</b></p></a>`
+    : `<div class="card off" aria-disabled="true"><span class="soon">Em breve</span><span class="tag">${esc(g.palavra)}</span><p><b>${esc(g.titulo)}</b></p></div>`
+  ).join('');
+}
+</script>
+</body></html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CLIENTE · Prompt &amp; Pipoca</title>
+<meta name="description" content="Marketing Skills: coleção gratuita de skills de marketing para o Claude ajudar a vender o que você programou.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/pp.css">
+<style>.code{white-space:pre-wrap}</style>
+</head>
+<body>
+<div class="top"><span><i class="dot"></i><span class="lbl">Material gratuito · </span><b>Prompt &amp; Pipoca</b></span><a href="https://www.youtube.com/@promptepipoca">@promptepipoca 🍿</a></div>
+
+<header class="hero"><div class="wrap">
+  <div class="kick">Palavra CLIENTE</div>
+  <h1>Marketing Skills: o Claude também ajuda a <em>vender</em> o que você programou</h1>
+  <div class="btns">
+    <a class="btn pri" href="#instalar">Como instalar</a>
+    <a class="btn" href="#usar">Como usar</a>
+  </div>
+</div></header>
+
+<main class="wrap">
+<section>
+  <div class="kick">O que é</div>
+  <p>Coleção gratuita de skills de marketing para agentes de IA, criada por Corey Haines (repositório coreyhaines31/marketingskills, licença MIT).</p>
+  <p>Segundo o README (resumo e tradução nossos): é feita para fundadores e profissionais técnicos de marketing que querem que o agente ajude com otimização de conversão, copywriting, SEO, analytics e crescimento. Funciona com Claude Code, OpenAI Codex, Cursor, Windsurf e outros agentes compatíveis com o padrão Agent Skills.</p>
+</section>
+
+<section>
+  <div class="kick">As que aparecem no vídeo (nomes das skills no repositório)</div>
+  <div class="code">copywriting</div><p class="mut" style="margin-top:6px">texto de página (home, landing page, página de preços)</p>
+  <div class="code">pricing</div><p class="mut" style="margin-top:6px">preço e pacotes</p>
+  <div class="code">launch</div><p class="mut" style="margin-top:6px">lançamento de produto ou de funcionalidade</p>
+  <div class="code">ads</div><p class="mut" style="margin-top:6px">anúncios pagos no Google, Meta e LinkedIn</p>
+  <div class="code">product-marketing</div><p class="mut" style="margin-top:6px">é a base. Cria o documento com o contexto do produto, que as outras skills consultam primeiro.</p>
+  <p style="margin-top:12px">Há dezenas de outras (SEO, e-mails, cadastro, onboarding, indicação e mais). A lista completa está no README.</p>
+</section>
+
+<section id="instalar">
+  <div class="kick">Como instalar (comandos copiados do README)</div>
+  <h3>Opção 1, pelo terminal (a recomendada pelo autor)</h3>
+  <div class="code big" id="c1"><button class="copy" data-copy="c1">Copiar</button>npx skills add coreyhaines31/marketingskills</div>
+  <p style="margin-top:12px">Para instalar só algumas:</p>
+  <div class="code big" id="c2"><button class="copy" data-copy="c2">Copiar</button>npx skills add coreyhaines31/marketingskills --skill cro copywriting</div>
+  <p style="margin-top:12px">Se for pedir para o próprio Claude Code instalar, o README manda indicar o agente:</p>
+  <div class="code big" id="c3"><button class="copy" data-copy="c3">Copiar</button>npx skills add coreyhaines31/marketingskills -a claude-code</div>
+  <h3>Opção 2, plugin do Claude Code</h3>
+  <div class="code big" id="c4"><button class="copy" data-copy="c4">Copiar</button>/plugin marketplace add coreyhaines31/marketingskills
+/plugin install marketing-skills</div>
+</section>
+
+<section id="usar">
+  <div class="kick">Como usar</div>
+  <p>Depois de instalar, basta pedir a tarefa. Exemplos do README, traduzidos por nós:</p>
+  <div class="code">"Escreva o texto da home do meu SaaS"</div><p class="mut" style="margin-top:6px">usa a skill copywriting</p>
+  <div class="code">"Me ajude a otimizar esta landing page para conversão"</div><p class="mut" style="margin-top:6px">usa a skill cro</p>
+  <p style="margin-top:12px">Também dá para chamar direto:</p>
+  <div class="code">/cro, /emails, /seo-audit</div>
+  <p style="margin-top:12px">Sugestão nossa: comece pela product-marketing, contando o que o seu app faz e para quem ele é.</p>
+</section>
+
+<section>
+  <div class="card r"><span class="tag r">Atenção</span>
+  <ul class="chk" style="margin-top:4px">
+    <li>O comando /plugin só funciona na sessão interativa do Claude Code no terminal. Segundo o README, ele não está disponível no Claude Code na web. Nesse caso, use a opção 1.</li>
+    <li>O material está em inglês e muitos exemplos são de produtos de software (observação nossa).</li>
+    <li>O README divulga serviços pagos do autor e parceiros patrocinadores. As skills em si são gratuitas.</li>
+  </ul></div>
+</section>
+
+<section>
+  <div class="kick">Referência</div>
+  <p><a href="https://github.com/coreyhaines31/marketingskills">https://github.com/coreyhaines31/marketingskills</a><br>README lido em 16/11/2026.</p>
+</section>
+
+<section class="cta">
+  <h2>Gostou? Tem mais <em>no canal</em> 🍿</h2>
+  <div class="btns" style="margin-top:18px"><a class="btn pri" href="https://www.youtube.com/@promptepipoca">Seguir o canal no YouTube</a><a class="btn" href="#instalar">Como instalar</a></div>
+</section>
+</main>
+<footer><div class="wrap">Prompt &amp; Pipoca 🍿 · Material não oficial. As skills são de coreyhaines31/marketingskills (licença MIT).</div></footer>
+<div class="toast" id="toast">Copiado ✓</div>
+<script>
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{
+  const el=document.getElementById(b.dataset.copy).cloneNode(true);el.querySelector('.copy').remove();
+  const txt=el.textContent.trim();
+  try{await navigator.clipboard.writeText(txt)}catch(e){const t=document.createElement('textarea');t.value=txt;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+  const tt=document.getElementById('toast');tt.classList.add('on');setTimeout(()=>tt.classList.remove('on'),1600);
+}));
+</script>
+</body>
+</html>
